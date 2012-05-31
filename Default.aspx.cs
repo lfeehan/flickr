@@ -24,8 +24,7 @@ namespace Flick
         static Random r = new Random();
         protected void leftButton_Click(object sender, CommandEventArgs e)
         {
-            
-            {
+        
                 string tags = searchBox.Text;
                 tags = cleanTags(tags);
                 string rss = "http://api.flickr.com/services/feeds/photos_public.gne?tags=" + tags + "&format=rss2";
@@ -62,12 +61,13 @@ namespace Flick
                         resultsLocation.Text += "<img src = '";
                         resultsLocation.Text += link.Attributes["url"].Value;
                         resultsLocation.Text += "'/></div>";
+
+
                     }
 
                 }
-            }
             
-
+        
         }
 
         private string cleanTags(string tags)
