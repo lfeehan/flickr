@@ -17,28 +17,12 @@
 
     <script>
         function pageLoad(sender, args) {
-            
-                $('#drag20').draggable();
-                $('#drag19').draggable();
-                $('#drag18').draggable();
-                $('#drag17').draggable();
-                $('#drag16').draggable();
-                $('#drag15').draggable();
-                $('#drag14').draggable();
-                $('#drag13').draggable();
-                $('#drag12').draggable();
-                $('#drag11').draggable();
-                $('#drag10').draggable();
-                $('#drag9').draggable();
-                $('#drag8').draggable();
-                $('#drag7').draggable();
-                $('#drag6').draggable();
-                $('#drag5').draggable();
-                $('#drag4').draggable();
-                $('#drag3').draggable();
-                $('#drag2').draggable();
-                $('#drag1').draggable();
-
+                var drag_prefix = '#drag';
+                var drag_count = 20;
+                
+                for(var i=1; i<=drag_count; drag++){
+                    $(drag_prefix + i).draggable();
+                }
                 $("#droppable").droppable({ drop: Drop });
 
                 function Drop(event, ui) {
